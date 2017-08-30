@@ -3,14 +3,14 @@ html lang="ja"
   head
     meta charset="UTF-8"
     meta name="viewport" content="width=device-width, initial-scale=1"
-    title 直近1週間の新刊一覧
+    title 新刊一覧
     link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"
     link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"
     link rel="stylesheet" type="text/css" href="css/index.css"
   body
     div#contents
-      h1 直近1週間の新刊一覧
-      span style="font-size: 12px" TRCよりデータを参照しており、毎週土曜日に更新予定です
+      h1 新刊一覧
+      span style="font-size: 12px" TRCよりデータを参照しており、毎週土曜日に更新予定です(2017/08/26更新)
       div#lineup
         div.paging-block
           = paginate @books
