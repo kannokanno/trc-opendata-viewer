@@ -1,0 +1,53 @@
+body {
+  box-sizing: border-box;
+  margin:     0;
+}
+
+#contents {
+  margin: 30px auto 0;
+  max-width: 960px;
+}
+
+#lineup {
+  border-top: 3px solid #af1b40;
+}
+
+#lineup-items {
+  vertical-align: top;
+  font-size: 0;
+  padding-left: 2%;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.lineup-item {
+  margin: 2% 0 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.author {
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+#footer {
+  padding-top: 20px;
+  text-align: right;
+  font-size: 13px;
+}
+
+.paging-block {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.pagination span {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 1px 8px;
+  background: #fff;
+  border: 1px solid #aaa;
+  text-decoration: none;
+  vertical-align: middle;
+}

@@ -1,0 +1,38 @@
+doctype html
+html lang="ja"
+  head
+    meta charset="UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title 直近1週間の新刊一覧
+    link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"
+    link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"
+    link rel="stylesheet" type="text/css" href="css/index.css"
+  body
+    div#contents
+      h1 直近1週間の新刊一覧
+      span style="font-size: 12px" TRCよりデータを参照しており、毎週土曜日に更新予定です
+      div#lineup
+        div.paging-block
+          = paginate @books
+
+        div.pure-g
+          - @books.each do |book|
+            div.pure-u-1-2.pure-u-md-1-6.lineup-item
+              a href="#{book[:href]}" target="_blank"
+                p
+                  img.pure-img src="#{book[:img]}"
+                div.book-detail #{book[:title]} (#{book[:publisher]})
+              div.author #{book[:author]}
+
+        div.paging-block
+          = paginate @books
+      footer#footer
+        div.pure-g
+          div.pure-u-1
+            | 新刊の参照元:
+            a href="http://www.trc.co.jp/trc_opendata/index.html" target="_blank" TRC新刊図書オープンデータ
+          div.pure-u-1
+            | 書影の参照元:
+            a href="https://openbd.jp/" target="_blank" openBD
+        a href="https://github.com/kannokanno/trc-opendata-viewer"
+          img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
