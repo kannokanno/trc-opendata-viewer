@@ -1,0 +1,13 @@
+# 新刊一覧のビューワー
+
+https://trc-opendata-viewer.herokuapp.com/
+
+[TRC新刊図書オープンデータ](http://www.trc.co.jp/trc_opendata/index.html)のデータを元にしたWebサイトです。
+
+書影は[openBD](https://openbd.jp/)のAPIを利用しています。
+
+## 実行
+
+```
+$ bundle exec rackup config.ru
+```
