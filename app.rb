@@ -53,7 +53,7 @@ def unzip_trc(path)
 end
 
 def fetch_newly_books
-  trc_records = unzip_trc('./data/TRCOpenBibData_20170826.zip')
+  trc_records = unzip_trc('./data/TRCOpenBibData_20170902.zip')
   trc_records.map {|item|
     isbn = item[:isbn].gsub('-', '')
     item[:img] = "https://cover.openbd.jp/#{isbn}.jpg"
